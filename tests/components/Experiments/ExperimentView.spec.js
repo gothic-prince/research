@@ -6,13 +6,16 @@ import entities from '../../store/ResearchEntitiesMocke'
 
 describe('<ExperimentsView />', () => {
   const researchViewComponent = shallow(
-    <ExperimentsView arrayOfExperimentEntityInterface={entities[0].getExperiments()} />
+    <ExperimentsView
+      structures={entities[0].getStructures()}
+      experiments={entities[0].getExperiments()} />
   )
 
   it('<ExperimentsView /> contains <ExperimentsProps />', () => {
     expect(researchViewComponent.contains(
-      <ExperimentsProps arrayOfPropEntityInterface={entities[0].getExperiments()[0].getProps()} />
+      <ExperimentsProps
+        structures={entities[0].getStructures()}
+        datas={entities[0].getExperiments()[0].getProps()} />
     )).to.equal(true)
   })
-
 })

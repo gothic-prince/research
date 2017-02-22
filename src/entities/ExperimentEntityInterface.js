@@ -5,7 +5,7 @@ export default class ExperimentEntityInterface {
    */
   getDate () {}
   /**
-   * @returns {PropEntityInterface[]}
+   * @returns {Number[]|bool}
    */
   getProps () {}
 }

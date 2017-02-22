@@ -1,29 +1,28 @@
 import React from 'react'
-import PropEntityInterface from '../../entities/PropEntityInterface'
+import StructureEntityInterface from '../../entities/StructureEntityInterface'
 class ExperimentsProps extends React.Component {
-  /**
-   * @param propEntity {PropEntityInterface}
-   */
-  getValue (propEntity) {
-    if (propEntity.getType() === 0) {
-      if (propEntity.getValue()) {
+  getValue (type, value) {
+    if (type === 0) {
+      if (value) {
         return 'Да'
       }
       return 'Нет'
     }
-    return propEntity.getValue()
+    return value
   }
   render () {
     /**
-     * @type {PropEntityInterface[]}
+     * @type {StructureEntityInterface[]}
      */
-    const propEntities = this.props.arrayOfPropEntityInterface
+    const structures = this.props.structures
+    const datas = this.props.datas
+
     return (
       <ul>
         {
-          propEntities.map((propEntity, key) => {
+          structures.map((structure, key) => {
             return <li key={key}>
-              <div>{propEntity.getName()}: {this.getValue(propEntity)}</div>
+              <div>{structure.getName()}: {this.getValue(structure.getType(), datas[key])}</div>
             </li>
           })
         }
@@ -32,11 +31,11 @@ class ExperimentsProps extends React.Component {
   }
 }
 
-
 ExperimentsProps.propTypes = {
-  arrayOfPropEntityInterface: React.PropTypes.arrayOf(
-    React.PropTypes.instanceOf(PropEntityInterface)
-  )
+  structures: React.PropTypes.arrayOf(
+    React.PropTypes.instanceOf(StructureEntityInterface).isRequired
+  ),
+  datas: React.PropTypes.array.isRequired
 }
 
 export default ExperimentsProps

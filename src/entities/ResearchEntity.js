@@ -1,7 +1,7 @@
 import ResearchEntityInterface from './ResearchEntityInterface'
 
 class ResearchEntity extends ResearchEntityInterface {
-  constructor (experiment, name, members, dates, id) {
+  constructor (experiment, name, members, dates, structures, id) {
     super()
     this.dates = []
     dates.map((date) => {
@@ -10,6 +10,7 @@ class ResearchEntity extends ResearchEntityInterface {
     this.experiment = experiment
     this.name = name
     this.members = members
+    this.structures = structures
     this.id = id
   }
   getName () {
@@ -29,6 +30,9 @@ class ResearchEntity extends ResearchEntityInterface {
   }
   getId () {
     return this.id
+  }
+  getStructures () {
+    return this.structures
   }
 }
 

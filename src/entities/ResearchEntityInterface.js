@@ -12,6 +12,10 @@ class ResearchEntityInterface {
    * @returns {Date[]}
    */
   getDates () {}
+  /**
+   * @returns {StructureEntityInterface[]}
+   */
+  getStructures () {}
   getId () {}
 }
 export default ResearchEntityInterface

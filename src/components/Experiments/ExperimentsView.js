@@ -1,11 +1,13 @@
 import React from 'react'
 import ExperimentEntityInterface from '../../entities/ExperimentEntityInterface'
+import StructureEntityInterface from '../../entities/StructureEntityInterface'
 import ExperimentsProps from './ExperimentsProps'
-const ExperimentsView = ({ arrayOfExperimentEntityInterface }) => {
+const ExperimentsView = (props) => {
   /**
    * @type {ExperimentEntityInterface[]}
    */
-  const experiments = arrayOfExperimentEntityInterface
+  const experiments = props.experiments
+
   return (
     <div>
       {experiments.map((experiment, key) => {
@@ -15,7 +17,9 @@ const ExperimentsView = ({ arrayOfExperimentEntityInterface }) => {
               {experiment.getDate().getDay()}.{experiment.getDate().getMonth()}.{experiment.getDate().getFullYear()}
             </div>
             <div>{experiment.getComment()}</div>
-            <ExperimentsProps arrayOfPropEntityInterface={experiment.getProps()} />
+            <ExperimentsProps
+              datas={experiment.getProps()}
+              structures={props.structures} />
           </div>
         )
       })}
@@ -23,8 +27,11 @@ const ExperimentsView = ({ arrayOfExperimentEntityInterface }) => {
   )
 }
 ExperimentsView.propTypes = {
-  arrayOfExperimentEntityInterface: React.PropTypes.arrayOf(
-    React.PropTypes.instanceOf(ExperimentEntityInterface)
+  experiments: React.PropTypes.arrayOf(
+    React.PropTypes.instanceOf(ExperimentEntityInterface).isRequired
+  ),
+  structures: React.PropTypes.arrayOf(
+    React.PropTypes.instanceOf(StructureEntityInterface).isRequired
   )
 }
 

@@ -24,8 +24,9 @@ describe('<ResearchView />', () => {
 
   it('<ResearchView /> contains <ExperimentsView />', () => {
     expect(researchViewComponent.contains(
-      <ExperimentsView arrayOfExperimentEntityInterface={entities[0].getExperiments()} />
+      <ExperimentsView
+        structures={entities[0].getStructures()}
+        experiments={entities[0].getExperiments()} />
     )).to.equal(true)
   })
-
 })

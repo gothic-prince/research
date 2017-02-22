@@ -12,7 +12,9 @@ const ResearchView = ({ researchEntityInterface }) => {
     <div>
       <ResearchTitle title={entity.getName()} />
       <ResearchMembers members={entity.getMembers()} />
-      <ExperimentsView arrayOfExperimentEntityInterface={entity.getExperiments()} />
+      <ExperimentsView
+        experiments={entity.getExperiments()}
+        structures={entity.getStructures()} />
     </div>
   )
 }

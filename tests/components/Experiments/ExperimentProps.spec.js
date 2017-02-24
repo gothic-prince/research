@@ -1,37 +1,30 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import ExperimentsProps from '../../../src/components/Experiments/ExperimentsProps'
+import ExperimentsPropsHeader from '../../../src/components/Experiments/ExperimentsPropsHeader'
+import ExperimentsPropsBody from '../../../src/components/Experiments/ExperimentsPropsBody'
 import entities from '../../store/ResearchEntitiesMocke'
 
 describe('<ExperimentsProps />', () => {
-
   const fisrtExperimentComponent = shallow(
     <ExperimentsProps
       structures={entities[0].getStructures()}
+      date={entities[0].getExperiments()[0].getDate()}
       datas={entities[0].getExperiments()[0].getProps()} />
   )
 
-  const secondExperimentComponent = shallow(
-    <ExperimentsProps
-      structures={entities[0].getStructures()}
-      datas={entities[0].getExperiments()[1].getProps()} />
-  )
-
-  const thirdExperimentComponent = shallow(
-    <ExperimentsProps
-      structures={entities[1].getStructures()}
-      datas={entities[1].getExperiments()[1].getProps()} />
-  )
-
-  it('Experiment is successful: Yes', () => {
-    expect(fisrtExperimentComponent.text()).to.equal('Эксперимент прошёл удачно: Да')
+  it('<ExperimentsProps /> contains <ExperimentsPropsHeader />', () => {
+    expect(fisrtExperimentComponent.contains(
+      <ExperimentsPropsHeader structures={entities[0].getStructures()} />
+    )).to.equal(true)
   })
 
-  it('Experiment is successful: No', () => {
-    expect(secondExperimentComponent.text()).to.equal('Эксперимент прошёл удачно: Нет')
-  })
-
-  it('Experiment: Selection of Masily Kanicce', () => {
-    expect(thirdExperimentComponent.text()).to.equal('Отпочкованно: 3Погибло: 0Мутация: Нет')
+  it('<ExperimentsProps /> contains <ExperimentsPropsBody />', () => {
+    expect(fisrtExperimentComponent.contains(
+      <ExperimentsPropsBody
+        structure={entities[0].getStructures()}
+        date={entities[0].getExperiments()[0].getDate()}
+        datas={entities[0].getExperiments()[0].getProps()} />
+    )).to.equal(true)
   })
 })

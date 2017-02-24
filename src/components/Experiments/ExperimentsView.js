@@ -18,6 +18,7 @@ const ExperimentsView = (props) => {
             </div>
             <div>{experiment.getComment()}</div>
             <ExperimentsProps
+              date={experiment.getDate()}
               datas={experiment.getProps()}
               structures={props.structures} />
           </div>

@@ -24,7 +24,7 @@ var entities = [
   ),
   new ResearchEntity(
     [
-      new ExperimentEntity('', new Date(1486684800000), [0, 0, 1]),
+      new ExperimentEntity('', new Date(1486684800000), [0, 0, 0]),
       new ExperimentEntity('', new Date(1486684800000), [3, 0, 0]),
       new ExperimentEntity('', new Date(1486684800000), [8, 1, 0]),
       new ExperimentEntity('', new Date(1486684800000), [23, 4, 0]),

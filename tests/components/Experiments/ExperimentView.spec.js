@@ -14,6 +14,7 @@ describe('<ExperimentsView />', () => {
   it('<ExperimentsView /> contains <ExperimentsProps />', () => {
     expect(researchViewComponent.contains(
       <ExperimentsProps
+        date={entities[0].getExperiments()[0].getDate()}
         structures={entities[0].getStructures()}
         datas={entities[0].getExperiments()[0].getProps()} />
     )).to.equal(true)

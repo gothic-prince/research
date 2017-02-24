@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import entities from '../../store/ResearchEntitiesMocke'
-import ResearchExperiments from '../../../src/components/ResearchList/ResearchExperiments'
+import ResearchExperiments from '../../../src/components/Experiments/ExperimentsList'
 
 describe('<ResearchExperiments />', () => {
   const researchExperimentsComponent = <ResearchExperiments experiments={entities[0].getExperiments()} />

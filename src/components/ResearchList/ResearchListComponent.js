@@ -2,7 +2,7 @@ import React from 'react'
 import { FetchResearch } from '../../actions/researchAction'
 import ResearchEntityInterface from '../../entities/ResearchEntityInterface'
 import ResearchItem from './ResearchItem'
-import Members from './ResearchMembers'
+import Members from '../Members/ResearchMembers'
 class ResearchListComponent extends React.Component {
   componentDidMount () {
     this.props.dispatch(FetchResearch())

@@ -31,7 +31,7 @@ describe('<ExperimentsPropsBody />', () => {
 
   describe('Second research', () => {
     let entity = entities[1]
-    function SecondResearch(researchName, gemmation, left, mutation, experimentIndex) {
+    function SecondResearch (researchName, gemmation, left, mutation, experimentIndex) {
       describe(researchName, () => {
         const experiment = shallow(
           <ExperimentsPropsBody

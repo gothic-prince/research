@@ -1,8 +1,8 @@
 import React from 'react'
 import ResearchEntityInterface from '../../entities/ResearchEntityInterface'
-import ResearchDays from './ResearchDays'
-import ResearchExperiments from './ResearchExperiments'
-import ResearchTitle from '../ResearchView/ResearchTitle'
+import ResearchDays from '../Date/ResearchDays'
+import ExperimentsList from '../Experiments/ExperimentsList'
+import ResearchTitle from '../Title/ResearchTitle'
 
 const ResearchItem = ({ entity }) => {
   /**
@@ -13,7 +13,7 @@ const ResearchItem = ({ entity }) => {
     <div>
       <ResearchTitle title={researchEntityInterface.getName()} />
       <div>
-        <ResearchExperiments experiments={researchEntityInterface.getExperiments()} />
+        <ExperimentsList experiments={researchEntityInterface.getExperiments()} />
         <span> | </span>
         <ResearchDays dates={researchEntityInterface.getDates()} />
       </div>

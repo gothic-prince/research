@@ -1,6 +1,6 @@
 import React from 'react'
-import ResearchTitle from './ResearchTitle'
-import ResearchMembers from '../ResearchList/ResearchMembers'
+import ResearchTitle from '../Title/ResearchTitle'
+import ResearchMembers from '../Members/ResearchMembers'
 import ExperimentsView from '../Experiments/ExperimentsView'
 import ResearchEntityInterface from '../../entities/ResearchEntityInterface'
 const ResearchView = ({ researchEntityInterface }) => {

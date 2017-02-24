@@ -2,8 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import ResearchView from '../../../src/components/ResearchView/ResearchView'
-import ResearchTitle from '../../../src/components/ResearchView/ResearchTitle'
-import ResearchMembers from '../../../src/components/ResearchList/ResearchMembers'
+import ResearchTitle from '../../../src/components/Title/ResearchTitle'
+import ResearchMembers from '../../../src/components/Members/ResearchMembers'
 import ExperimentsView from '../../../src/components/Experiments/ExperimentsView'
 import entities from '../../store/ResearchEntitiesMocke'
 

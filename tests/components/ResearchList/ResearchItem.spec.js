@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import ResearchItem from '../../../src/components/ResearchList/ResearchItem'
-import ResearchDays from '../../../src/components/ResearchList/ResearchDays'
-import ResearchTitle from '../../../src/components/ResearchView/ResearchTitle'
-import ResearchExperiments from '../../../src/components/ResearchList/ResearchExperiments'
+import ResearchDays from '../../../src/components/Date/ResearchDays'
+import ResearchTitle from '../../../src/components/Title/ResearchTitle'
+import ResearchExperiments from '../../../src/components/Experiments/ExperimentsList'
 import entities from '../../store/ResearchEntitiesMocke'
 
 describe('<ResearchItem />', () => {

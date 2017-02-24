@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import entities from '../../store/ResearchEntitiesMocke'
-import ResearchDays from '../../../src/components/ResearchList/ResearchDays'
+import ResearchDays from '../../../src/components/Date/ResearchDays'
 
 describe('<ResearchDays />', () => {
   const researchDaysComponent = <ResearchDays dates={entities[0].getDates()} />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ResearchItem from '../../../src/components/ResearchList/ResearchItem'
+import ResearchItem from '../../../src/components/Items/ResearchItem'
 import ResearchDays from '../../../src/components/Date/ResearchDays'
 import ResearchTitle from '../../../src/components/Title/ResearchTitle'
 import ResearchExperiments from '../../../src/components/Experiments/ExperimentsList'

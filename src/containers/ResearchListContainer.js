@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ResearchListComponent from '../components/ResearchList/ResearchListComponent'
+import ResearchListComponent from './ResearchListComponent'
 
 const stateToProps = (state) => {
   /**

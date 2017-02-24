@@ -1,8 +1,8 @@
 import React from 'react'
-import ResearchTitle from '../Title/ResearchTitle'
-import ResearchMembers from '../Members/ResearchMembers'
-import ExperimentsView from '../Experiments/ExperimentsView'
-import ResearchEntityInterface from '../../entities/ResearchEntityInterface'
+import ResearchTitle from '../components/Title/ResearchTitle'
+import ResearchMembers from '../components/Members/ResearchMembers'
+import ExperimentsView from '../components/Experiments/ExperimentsView'
+import ResearchEntityInterface from '../entities/ResearchEntityInterface'
 const ResearchView = ({ researchEntityInterface }) => {
   /**
    * @type {ResearchEntityInterface}

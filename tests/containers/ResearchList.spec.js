@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ResearchListComponent from '../../../src/components/ResearchList'
-import ResearchItem from '../../../src/components/ResearchList/ResearchItem'
-import ResearchMembers from '../../../src/components/Members/ResearchMembers'
-import entities from '../../store/ResearchEntitiesMocke'
+import ResearchListComponent from '../../src/containers/ResearchListComponent'
+import ResearchItem from '../../src/components/Items/ResearchItem'
+import ResearchMembers from '../../src/components/Members/ResearchMembers'
+import entities from '../store/ResearchEntitiesMocke'
 
 describe('<ResearchListComponent />', () => {
   const research = shallow(<ResearchListComponent entities={entities} />)
